@@ -1,0 +1,182 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/edit', user._id]">
+            <strong style="font-size: 20px;">Edit Profile</strong>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <button class="btn btn-danger" (click)="logout()">Log Out</button>
+  </nav>
+  <div class="card border-danger mb-3" style="max-width: 20rem;">
+    <div id="card-header" class="text-danger">
+      <h2>Welcome, {{user.first_name}} !</h2>
+    </div>
+    <div class="card-body text-danger">
+      <h4 class="card-title">Success card title</h4>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div>
+
+  <div id="body" class="container">
+    <h3>Here are some of the events at your state:</h3>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Location</th>
+          <th scope="col">Host</th>
+          <th scope="col">Action/Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-success">
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Here are some of the events at your state:</h3>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Date</th>
+          <th scope="col">Location</th>
+          <th scope="col">Host</th>
+          <th scope="col">Action/Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-danger">
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <form>
+      <fieldset>
+        <legend>Add a Event</legend>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" placeholder="let's add an event">
+        </div>
+        <div class="form-group">
+          <label>Date:</label>
+          <input type="datetime-local" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Price:</label>
+          <div class="input-group">
+            <div class="input-group-addon">$</div>
+            <input type="text" class="form-control" placeholder="Price....">
+            <div class="input-group-addon">.00</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Location:</label>
+          <select class="custom-select" name="state">
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </form>
+  </div>
+
+  <!-- Footer Section -->
+  <footer id="myFooter">
+    <div class="container">
+      <iframe id="map-container" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJOwg_06VPwokRYv534QaPC8g&key=AIzaSyBdJm9Amm4KALkKlZObWn40dcpRyH119zg">
+      </iframe>
+    </div>
+    <div class="social-networks">
+      <a href="#" class="twitter">
+        <i class="fa fa-twitter"></i>
+      </a>
+      <a href="#" class="facebook">
+        <i class="fa fa-facebook"></i>
+      </a>
+      <a href="#" class="google">
+        <i class="fa fa-google-plus"></i>
+      </a>
+    </div>
+    <div class="footer-copyright">
+      <p>© 2017 Kevin Ke </p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
